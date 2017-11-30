@@ -36,7 +36,7 @@ public class GuiCommand implements CommandExecutor {
 	Inventory invs = Inventory.builder().of(InventoryArchetypes.CHEST)
 			.property(InventoryDimension.PROPERTY_NAM, new InventoryDimension(9, 4))
 			.property(InventoryTitle.PROPERTY_NAME,
-					InventoryTitle.of(Text.builder("CrazyFeet").color(TextColors.DARK_RED).style(TextStyles.BOLD).build()))
+					InventoryTitle.of(Text.builder("Trails GUI").color(TextColors.DARK_RED).style(TextStyles.BOLD).build()))
 			.build(CrazyFeet.getPlugin());
 
 	@Listener
@@ -112,8 +112,8 @@ public class GuiCommand implements CommandExecutor {
 				Sponge.getScheduler().createTaskBuilder().delayTicks(1).
 						execute(() -> Sponge.getCommandManager().process(player, "crazymagichead")).
 						submit(CrazyFeet.getInstance());
-			}
-			if (item.getItem().equals(ItemTypes.SOUL_SAND)) {
+r			}
+ 			if (item.getItem().equals(ItemTypes.SOUL_SAND)) {
 				player.playSound(SoundTypes.ENTITY_PLAYER_LEVELUP, player.getLocation().getPosition(), 1);
 				Sponge.getScheduler().createTaskBuilder().delayTicks(1).
 						execute(() -> Sponge.getCommandManager().process(player, "crazywitchhead")).
@@ -123,7 +123,7 @@ public class GuiCommand implements CommandExecutor {
 				player.playSound(SoundTypes.ENTITY_PLAYER_LEVELUP, player.getLocation().getPosition(), 1);
 				Sponge.getScheduler().createTaskBuilder().delayTicks(1).
 						execute(() -> Sponge.getCommandManager().process(player, "crazypearlhead")).
-						submit(CrazyFeet.getInstance());
+r						submit(CrazyFeet.getInstance());
 			}
 			if (item.getItem().equals(ItemTypes.TNT)) {
 				player.playSound(SoundTypes.ENTITY_PLAYER_LEVELUP, player.getLocation().getPosition(), 1);
@@ -158,36 +158,36 @@ public class GuiCommand implements CommandExecutor {
 	public CommandResult execute(CommandSource src, CommandContext ctx) throws CommandException {
 		Player player = (Player) src;
 		ItemStack fire = ItemStack.of(ItemTypes.FIRE_CHARGE, 1);
-		fire.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyFire!"));
+		fire.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Fire Trail"));
 		ItemStack heart = ItemStack.of(ItemTypes.REDSTONE_BLOCK, 1);
-		heart.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyHeart!"));
+		heart.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Heart Trail"));
 		ItemStack note = ItemStack.of(ItemTypes.NOTEBLOCK, 1);
-		note.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyNote!"));
+		note.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Note Trail"));
 		ItemStack magic = ItemStack.of(ItemTypes.EMERALD, 1);
-		magic.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyMagic!"));
+		magic.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Magic Trail"));
 		ItemStack witch = ItemStack.of(ItemTypes.NETHER_STAR, 1);
-		witch.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyWitch!"));
+		witch.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Witch Trail"));
 		ItemStack pearl = ItemStack.of(ItemTypes.ENDER_PEARL, 1);
-		pearl.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyPearl!"));
+		pearl.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Ender Trail"));
 		ItemStack smoke = ItemStack.of(ItemTypes.COAL_BLOCK, 1);
-		smoke.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Crazysmoke!"));
+		smoke.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Smoke Trail"));
 		ItemStack border = ItemStack.of(ItemTypes.STAINED_GLASS_PANE, 1);
 		border.offer(Keys.DISPLAY_NAME, LanguageUtils.getText("chooseParticleMode"));
 		border.offer(Keys.DYE_COLOR, DyeColors.GRAY);
 		ItemStack smokeh = ItemStack.of(ItemTypes.TNT, 1);
-		smokeh.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazysmokeHead!"));
+		smokeh.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Smoke Trail (Head)"));
 		ItemStack fireH = ItemStack.of(ItemTypes.FLINT_AND_STEEL, 1);
-		fireH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyfireHead!"));
+		fireH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Fire Trail (Head)"));
 		ItemStack heartH = ItemStack.of(ItemTypes.REDSTONE, 1);
-		heartH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyHeartHead!"));
+		heartH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Heart Trail (Head)"));
 		ItemStack noteH = ItemStack.of(ItemTypes.JUKEBOX, 1);
-		noteH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyNoteHead!"));
+		noteH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Note Trail (Head)"));
 		ItemStack magicH = ItemStack.of(ItemTypes.EMERALD_BLOCK, 1);
-		magicH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyMagicHead!"));
+		magicH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Magic Trail (Head)"));
 		ItemStack witchH = ItemStack.of(ItemTypes.SOUL_SAND, 1);
-		witchH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyWitchHead!"));
+		witchH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Witch Trail (Head)"));
 		ItemStack pearlH = ItemStack.of(ItemTypes.ENDER_EYE, 1);
-		pearlH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "CrazyPearlHead!"));
+		pearlH.offer(Keys.DISPLAY_NAME, Text.of(TextColors.RED, "Ender Trail (Head)"));
 		ItemStack cdisable = ItemStack.of(ItemTypes.BARRIER, 1);
 		cdisable.offer(Keys.DISPLAY_NAME, LanguageUtils.getText("removeAllParticles"));
 		ItemStack nextpage = ItemStack.of(ItemTypes.PAPER, 2);
